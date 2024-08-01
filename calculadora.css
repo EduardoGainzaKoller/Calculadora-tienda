@@ -1,39 +1,74 @@
 body {
     font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
     margin: 0;
     padding: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
+    background-color: #f0f0f0;
 }
 
-table {
+.header {
+    text-align: center;
+    margin-top: 20px;
+}
+
+/* Container for responsive table */
+.container {
     width: 90%;
-    max-width: 600px;
-    margin: 20px auto;
+    margin: 0 auto;
+    overflow-x: auto;
+}
+
+/* Styling for table */
+table {
+    width: 100%;
     border-collapse: collapse;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin: 20px 0;
+    background-color: #fff;
+}
+
+table, th, td {
+    border: 1px solid #ddd;
 }
 
 th, td {
-    border: 1px solid #ddd;
-    padding: 12px;
+    padding: 8px;
     text-align: center;
 }
 
 th {
-    background-color: #f8f8f8;
+    background-color: #f2f2f2;
 }
 
-input[type="number"] {
-    width: 80px;
-    padding: 6px;
-    text-align: center;
+/* Responsive design */
+@media (max-width: 600px) {
+    th, td {
+        display: block;
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    th {
+        display: none;
+    }
+
+    tr {
+        margin-bottom: 10px;
+        display: block;
+        width: 100%;
+    }
+
+    td {
+        display: flex;
+        justify-content: space-between;
+        border: none;
+    }
+
+    .qty-input {
+        width: 100%;
+        box-sizing: border-box;
+    }
 }
 
+/* Additional styling for totals */
 .total {
     font-weight: bold;
-    background-color: #f8f8f8;
 }

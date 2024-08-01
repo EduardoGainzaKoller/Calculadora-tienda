@@ -7,99 +7,34 @@
     <link rel="stylesheet" href="calculadora.css">
 </head>
 <body>
-    <h1 style="text-align: center;">Calculadora de tu panita</h1>
-    <table>
-        <thead>
-            <tr>
-                <th>Billetes/Monedas</th>
-                <th>Unidades</th>
-                <th>Suma</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td>500 €</td>
-                <td><input type="number" id="qty500" oninput="calculateRow(500, 'qty500', 'value500')" value="0"></td>
-                <td id="value500">0</td>
-            </tr>
-            <tr>
-                <td>200 €</td>
-                <td><input type="number" id="qty200" oninput="calculateRow(200, 'qty200', 'value200')" value="0"></td>
-                <td id="value200">0</td>
-            </tr>
-            <tr>
-                <td>100 €</td>
-                <td><input type="number" id="qty100" oninput="calculateRow(100, 'qty100', 'value100')" value="0"></td>
-                <td id="value100">0</td>
-            </tr>
-            <tr>
-                <td>50 €</td>
-                <td><input type="number" id="qty50" oninput="calculateRow(50, 'qty50', 'value50')" value="0"></td>
-                <td id="value50">0</td>
-            </tr>
-            <tr>
-                <td>20 €</td>
-                <td><input type="number" id="qty20" oninput="calculateRow(20, 'qty20', 'value20')" value="0"></td>
-                <td id="value20">0</td>
-            </tr>
-            <tr>
-                <td>10 €</td>
-                <td><input type="number" id="qty10" oninput="calculateRow(10, 'qty10', 'value10')" value="0"></td>
-                <td id="value10">0</td>
-            </tr>
-            <tr>
-                <td>5 €</td>
-                <td><input type="number" id="qty5" oninput="calculateRow(5, 'qty5', 'value5')" value="0"></td>
-                <td id="value5">0</td>
-            </tr>
-            <tr>
-                <td>2 €</td>
-                <td><input type="number" id="qty2" oninput="calculateRow(2, 'qty2', 'value2')" value="0"></td>
-                <td id="value2">0</td>
-            </tr>
-            <tr>
-                <td>1 €</td>
-                <td><input type="number" id="qty1" oninput="calculateRow(1, 'qty1', 'value1')" value="0"></td>
-                <td id="value1">0</td>
-            </tr>
-            <tr>
-                <td>0.50 €</td>
-                <td><input type="number" id="qty050" oninput="calculateRow(0.50, 'qty050', 'value050')" value="0"></td>
-                <td id="value050">0</td>
-            </tr>
-            <tr>
-                <td>0.20 €</td>
-                <td><input type="number" id="qty020" oninput="calculateRow(0.20, 'qty020', 'value020')" value="0"></td>
-                <td id="value020">0</td>
-            </tr>
-            <tr>
-                <td>0.10 €</td>
-                <td><input type="number" id="qty010" oninput="calculateRow(0.10, 'qty010', 'value010')" value="0"></td>
-                <td id="value010">0</td>
-            </tr>
-            <tr>
-                <td>0.05 €</td>
-                <td><input type="number" id="qty005" oninput="calculateRow(0.05, 'qty005', 'value005')" value="0"></td>
-                <td id="value005">0</td>
-            </tr>
-            <tr>
-                <td>0.02 €</td>
-                <td><input type="number" id="qty002" oninput="calculateRow(0.02, 'qty002', 'value002')" value="0"></td>
-                <td id="value002">0</td>
-            </tr>
-            <tr>
-                <td>0.01 €</td>
-                <td><input type="number" id="qty001" oninput="calculateRow(0.01, 'qty001', 'value001')" value="0"></td>
-                <td id="value001">0</td>
-            </tr>
-        </tbody>
-        <tfoot>
-            <tr>
-                <td colspan="2" class="total">Total</td>
-                <td id="totalValue" class="total">0</td>
-            </tr>
-        </tfoot>
-    </table>
+    <h1 class="header">Calculadora de tu panita</h1>
+    <div class="container">
+        <table>
+            <thead>
+                <tr>
+                    <th>Billetes/Monedas</th>
+                    <th>Unidades</th>
+                    <th>Suma</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Repite el bloque de fila para cada denominación -->
+                <tr>
+                    <td>500 €</td>
+                    <td><input type="number" class="qty-input" id="qty500" oninput="calculateRow(500, 'qty500', 'value500')" value="0"></td>
+                    <td id="value500">0</td>
+                </tr>
+                <!-- ...otros valores aquí... -->
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td colspan="2" class="total">Total</td>
+                    <td id="totalValue" class="total">0</td>
+                </tr>
+            </tfoot>
+        </table>
+    </div>
     <script src="calculadora.js"></script>
 </body>
 </html>
+

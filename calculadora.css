@@ -1,3 +1,4 @@
+/* General styling */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -72,3 +73,4 @@ th {
 .total {
     font-weight: bold;
 }
+
